@@ -1,0 +1,24 @@
+{
+  "name": "schema-check-json",
+  "version": "0.1.0",
+  "description": "A JSON Schema validator with readable errors, a schema checker and a schema inferrer",
+  "license": "MIT",
+  "author": "jesuswork60-create",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "bin": {
+    "schema-check": "dist/src/cli/bin.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && node --test \"dist/tests/**/*.test.js\""
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.4.0"
+  }
+}
