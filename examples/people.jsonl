@@ -1,0 +1,3 @@
+{"name": "Alpha Dev", "age": 41, "contact": {"phone": "+1 555 0100"}}
+{"name": "", "age": 29, "contact": {"email": "gamma@example.com"}}
+{"name": "Delta Dev", "age": 35, "contact": {"email": "delta@example.com"}, "tags": []}

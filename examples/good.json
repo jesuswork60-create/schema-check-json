@@ -1,0 +1,6 @@
+{
+  "name": "Alpha Dev",
+  "age": 41,
+  "contact": { "email": "alpha@example.com" },
+  "tags": ["compiler", "chess"]
+}

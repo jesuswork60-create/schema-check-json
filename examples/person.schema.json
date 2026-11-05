@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A person in the sample address book",
+  "type": "object",
+  "required": ["name", "age", "contact"],
+  "additionalProperties": false,
+  "properties": {
+    "name": { "type": "string", "minLength": 1 },
+    "age": { "type": "integer", "minimum": 0 },
+    "contact": { "$ref": "#/$defs/contact" },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    }
+  },
+  "$defs": {
+    "contact": {
+      "anyOf": [
+        {
+          "type": "object",
+          "required": ["email"],
+          "properties": { "email": { "type": "string", "format": "email" } }
+        },
+        {
+          "type": "object",
+          "required": ["phone"],
+          "properties": { "phone": { "type": "string", "pattern": "^[0-9 +-]+$" } }
+        }
+      ]
+    }
+  }
+}
